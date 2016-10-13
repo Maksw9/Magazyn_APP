@@ -1,0 +1,14 @@
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn1.0.exe.config
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn1.0.exe
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn1.0.pdb
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\MetroFramework.Design.dll
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\MetroFramework.dll
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\MetroFramework.Fonts.dll
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1.0.csprojResolveAssemblyReference.cache
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1._0.Form1.resources
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1._0.Properties.Resources.resources
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1.0.csproj.GenerateResource.Cache
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1.0.exe
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1.0.pdb
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn.mdf
+c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn_log.ldf
