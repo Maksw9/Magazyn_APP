@@ -61,6 +61,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -79,14 +80,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MagazynDataSet.cs">
+      <DependentUpon>MagazynDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MagazynDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MagazynDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Produkt.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowMoreDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMoreDialog.Designer.cs">
+      <DependentUpon>ShowMoreDialog.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +110,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShowMoreDialog.resx">
+      <DependentUpon>ShowMoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MagazynDataSet.xsc">
       <DependentUpon>MagazynDataSet.xsd</DependentUpon>
     </None>

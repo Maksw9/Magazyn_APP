@@ -12,3 +12,4 @@ c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\D
 c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1.0.pdb
 c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn.mdf
 c:\users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\bin\Debug\Magazyn_log.ldf
+C:\Users\czach\documents\visual studio 2015\Projects\Magazyn1.0\Magazyn1.0\obj\Debug\Magazyn1._0.ShowMoreDialog.resources

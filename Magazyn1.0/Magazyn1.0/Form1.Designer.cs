@@ -45,14 +45,10 @@
             this.raportBtn = new MetroFramework.Controls.MetroTile();
             this.moreBtn = new MetroFramework.Controls.MetroTile();
             this.productDataGrid = new System.Windows.Forms.DataGridView();
-            this.producentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.magazynDataSet = new Magazyn1._0.MagazynDataSet();
             this.tableTableAdapter = new Magazyn1._0.MagazynDataSetTableAdapters.TableTableAdapter();
-            this.tableAdapterManager = new Magazyn1._0.MagazynDataSetTableAdapters.TableAdapterManager();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nazwaTextBox = new System.Windows.Forms.TextBox();
             this.producentTextBox = new System.Windows.Forms.TextBox();
@@ -63,6 +59,11 @@
             this.typTextBox = new System.Windows.Forms.TextBox();
             this.modelTextBox = new System.Windows.Forms.TextBox();
             this.rozmiarTextBox = new System.Windows.Forms.TextBox();
+            this.magazynDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
             nazwaLabel = new System.Windows.Forms.Label();
             producentLabel = new System.Windows.Forms.Label();
@@ -76,7 +77,98 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazynDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazynDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(685, 38);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 6;
+            idLabel.Text = "Id:";
+            // 
+            // nazwaLabel
+            // 
+            nazwaLabel.AutoSize = true;
+            nazwaLabel.Location = new System.Drawing.Point(661, 64);
+            nazwaLabel.Name = "nazwaLabel";
+            nazwaLabel.Size = new System.Drawing.Size(43, 13);
+            nazwaLabel.TabIndex = 8;
+            nazwaLabel.Text = "Nazwa:";
+            // 
+            // producentLabel
+            // 
+            producentLabel.AutoSize = true;
+            producentLabel.Location = new System.Drawing.Point(645, 90);
+            producentLabel.Name = "producentLabel";
+            producentLabel.Size = new System.Drawing.Size(59, 13);
+            producentLabel.TabIndex = 10;
+            producentLabel.Text = "Producent:";
+            // 
+            // alejaLabel
+            // 
+            alejaLabel.AutoSize = true;
+            alejaLabel.Location = new System.Drawing.Point(671, 116);
+            alejaLabel.Name = "alejaLabel";
+            alejaLabel.Size = new System.Drawing.Size(33, 13);
+            alejaLabel.TabIndex = 12;
+            alejaLabel.Text = "Aleja:";
+            // 
+            // boxLabel
+            // 
+            boxLabel.AutoSize = true;
+            boxLabel.Location = new System.Drawing.Point(676, 142);
+            boxLabel.Name = "boxLabel";
+            boxLabel.Size = new System.Drawing.Size(28, 13);
+            boxLabel.TabIndex = 14;
+            boxLabel.Text = "Box:";
+            // 
+            // pozycjaLabel
+            // 
+            pozycjaLabel.AutoSize = true;
+            pozycjaLabel.Location = new System.Drawing.Point(657, 168);
+            pozycjaLabel.Name = "pozycjaLabel";
+            pozycjaLabel.Size = new System.Drawing.Size(47, 13);
+            pozycjaLabel.TabIndex = 16;
+            pozycjaLabel.Text = "Pozycja:";
+            // 
+            // ilośćLabel
+            // 
+            ilośćLabel.AutoSize = true;
+            ilośćLabel.Location = new System.Drawing.Point(672, 194);
+            ilośćLabel.Name = "ilośćLabel";
+            ilośćLabel.Size = new System.Drawing.Size(32, 13);
+            ilośćLabel.TabIndex = 18;
+            ilośćLabel.Text = "Ilość:";
+            // 
+            // typLabel
+            // 
+            typLabel.AutoSize = true;
+            typLabel.Location = new System.Drawing.Point(676, 220);
+            typLabel.Name = "typLabel";
+            typLabel.Size = new System.Drawing.Size(28, 13);
+            typLabel.TabIndex = 20;
+            typLabel.Text = "Typ:";
+            // 
+            // modelLabel
+            // 
+            modelLabel.AutoSize = true;
+            modelLabel.Location = new System.Drawing.Point(665, 249);
+            modelLabel.Name = "modelLabel";
+            modelLabel.Size = new System.Drawing.Size(39, 13);
+            modelLabel.TabIndex = 22;
+            modelLabel.Text = "Model:";
+            // 
+            // rozmiarLabel
+            // 
+            rozmiarLabel.AutoSize = true;
+            rozmiarLabel.Location = new System.Drawing.Point(656, 275);
+            rozmiarLabel.Name = "rozmiarLabel";
+            rozmiarLabel.Size = new System.Drawing.Size(48, 13);
+            rozmiarLabel.TabIndex = 24;
+            rozmiarLabel.Text = "Rozmiar:";
             // 
             // addBtn
             // 
@@ -137,6 +229,7 @@
             this.productDataGrid.AutoGenerateColumns = false;
             this.productDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.producentDataGridViewTextBoxColumn,
             this.nazwaDataGridViewTextBoxColumn,
             this.typDataGridViewTextBoxColumn,
@@ -148,33 +241,12 @@
             this.productDataGrid.Size = new System.Drawing.Size(443, 224);
             this.productDataGrid.TabIndex = 5;
             // 
-            // producentDataGridViewTextBoxColumn
+            // Id
             // 
-            this.producentDataGridViewTextBoxColumn.DataPropertyName = "Producent";
-            this.producentDataGridViewTextBoxColumn.HeaderText = "Producent";
-            this.producentDataGridViewTextBoxColumn.Name = "producentDataGridViewTextBoxColumn";
-            this.producentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nazwaDataGridViewTextBoxColumn
-            // 
-            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
-            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
-            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
-            this.nazwaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typDataGridViewTextBoxColumn
-            // 
-            this.typDataGridViewTextBoxColumn.DataPropertyName = "Typ";
-            this.typDataGridViewTextBoxColumn.HeaderText = "Typ";
-            this.typDataGridViewTextBoxColumn.Name = "typDataGridViewTextBoxColumn";
-            this.typDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // tableBindingSource
             // 
@@ -190,187 +262,124 @@
             // 
             this.tableTableAdapter.ClearBeforeFill = true;
             // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Magazyn1._0.MagazynDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(676, 36);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 6;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(701, 33);
+            this.idTextBox.Location = new System.Drawing.Point(710, 35);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 7;
             // 
-            // nazwaLabel
-            // 
-            nazwaLabel.AutoSize = true;
-            nazwaLabel.Location = new System.Drawing.Point(652, 62);
-            nazwaLabel.Name = "nazwaLabel";
-            nazwaLabel.Size = new System.Drawing.Size(43, 13);
-            nazwaLabel.TabIndex = 8;
-            nazwaLabel.Text = "Nazwa:";
-            // 
             // nazwaTextBox
             // 
             this.nazwaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Nazwa", true));
-            this.nazwaTextBox.Location = new System.Drawing.Point(701, 59);
+            this.nazwaTextBox.Location = new System.Drawing.Point(710, 61);
             this.nazwaTextBox.Name = "nazwaTextBox";
             this.nazwaTextBox.Size = new System.Drawing.Size(100, 20);
             this.nazwaTextBox.TabIndex = 9;
             // 
-            // producentLabel
-            // 
-            producentLabel.AutoSize = true;
-            producentLabel.Location = new System.Drawing.Point(636, 88);
-            producentLabel.Name = "producentLabel";
-            producentLabel.Size = new System.Drawing.Size(59, 13);
-            producentLabel.TabIndex = 10;
-            producentLabel.Text = "Producent:";
-            // 
             // producentTextBox
             // 
             this.producentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Producent", true));
-            this.producentTextBox.Location = new System.Drawing.Point(701, 85);
+            this.producentTextBox.Location = new System.Drawing.Point(710, 87);
             this.producentTextBox.Name = "producentTextBox";
             this.producentTextBox.Size = new System.Drawing.Size(100, 20);
             this.producentTextBox.TabIndex = 11;
             // 
-            // alejaLabel
-            // 
-            alejaLabel.AutoSize = true;
-            alejaLabel.Location = new System.Drawing.Point(662, 114);
-            alejaLabel.Name = "alejaLabel";
-            alejaLabel.Size = new System.Drawing.Size(33, 13);
-            alejaLabel.TabIndex = 12;
-            alejaLabel.Text = "Aleja:";
-            // 
             // alejaTextBox
             // 
             this.alejaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Aleja", true));
-            this.alejaTextBox.Location = new System.Drawing.Point(701, 111);
+            this.alejaTextBox.Location = new System.Drawing.Point(710, 113);
             this.alejaTextBox.Name = "alejaTextBox";
             this.alejaTextBox.Size = new System.Drawing.Size(100, 20);
             this.alejaTextBox.TabIndex = 13;
             // 
-            // boxLabel
-            // 
-            boxLabel.AutoSize = true;
-            boxLabel.Location = new System.Drawing.Point(667, 140);
-            boxLabel.Name = "boxLabel";
-            boxLabel.Size = new System.Drawing.Size(28, 13);
-            boxLabel.TabIndex = 14;
-            boxLabel.Text = "Box:";
-            // 
             // boxTextBox
             // 
             this.boxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Box", true));
-            this.boxTextBox.Location = new System.Drawing.Point(701, 137);
+            this.boxTextBox.Location = new System.Drawing.Point(710, 139);
             this.boxTextBox.Name = "boxTextBox";
             this.boxTextBox.Size = new System.Drawing.Size(100, 20);
             this.boxTextBox.TabIndex = 15;
             // 
-            // pozycjaLabel
-            // 
-            pozycjaLabel.AutoSize = true;
-            pozycjaLabel.Location = new System.Drawing.Point(648, 166);
-            pozycjaLabel.Name = "pozycjaLabel";
-            pozycjaLabel.Size = new System.Drawing.Size(47, 13);
-            pozycjaLabel.TabIndex = 16;
-            pozycjaLabel.Text = "Pozycja:";
-            // 
             // pozycjaTextBox
             // 
             this.pozycjaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Pozycja", true));
-            this.pozycjaTextBox.Location = new System.Drawing.Point(701, 163);
+            this.pozycjaTextBox.Location = new System.Drawing.Point(710, 165);
             this.pozycjaTextBox.Name = "pozycjaTextBox";
             this.pozycjaTextBox.Size = new System.Drawing.Size(100, 20);
             this.pozycjaTextBox.TabIndex = 17;
             // 
-            // ilośćLabel
-            // 
-            ilośćLabel.AutoSize = true;
-            ilośćLabel.Location = new System.Drawing.Point(663, 192);
-            ilośćLabel.Name = "ilośćLabel";
-            ilośćLabel.Size = new System.Drawing.Size(32, 13);
-            ilośćLabel.TabIndex = 18;
-            ilośćLabel.Text = "Ilość:";
-            // 
             // ilośćTextBox
             // 
             this.ilośćTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Ilość", true));
-            this.ilośćTextBox.Location = new System.Drawing.Point(701, 189);
+            this.ilośćTextBox.Location = new System.Drawing.Point(710, 191);
             this.ilośćTextBox.Name = "ilośćTextBox";
             this.ilośćTextBox.Size = new System.Drawing.Size(100, 20);
             this.ilośćTextBox.TabIndex = 19;
             // 
-            // typLabel
-            // 
-            typLabel.AutoSize = true;
-            typLabel.Location = new System.Drawing.Point(667, 218);
-            typLabel.Name = "typLabel";
-            typLabel.Size = new System.Drawing.Size(28, 13);
-            typLabel.TabIndex = 20;
-            typLabel.Text = "Typ:";
-            // 
             // typTextBox
             // 
             this.typTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Typ", true));
-            this.typTextBox.Location = new System.Drawing.Point(701, 215);
+            this.typTextBox.Location = new System.Drawing.Point(710, 217);
             this.typTextBox.Name = "typTextBox";
             this.typTextBox.Size = new System.Drawing.Size(100, 20);
             this.typTextBox.TabIndex = 21;
             // 
-            // modelLabel
-            // 
-            modelLabel.AutoSize = true;
-            modelLabel.Location = new System.Drawing.Point(656, 247);
-            modelLabel.Name = "modelLabel";
-            modelLabel.Size = new System.Drawing.Size(39, 13);
-            modelLabel.TabIndex = 22;
-            modelLabel.Text = "Model:";
-            // 
             // modelTextBox
             // 
             this.modelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Model", true));
-            this.modelTextBox.Location = new System.Drawing.Point(701, 244);
+            this.modelTextBox.Location = new System.Drawing.Point(710, 246);
             this.modelTextBox.Name = "modelTextBox";
             this.modelTextBox.Size = new System.Drawing.Size(100, 20);
             this.modelTextBox.TabIndex = 23;
             // 
-            // rozmiarLabel
-            // 
-            rozmiarLabel.AutoSize = true;
-            rozmiarLabel.Location = new System.Drawing.Point(647, 273);
-            rozmiarLabel.Name = "rozmiarLabel";
-            rozmiarLabel.Size = new System.Drawing.Size(48, 13);
-            rozmiarLabel.TabIndex = 24;
-            rozmiarLabel.Text = "Rozmiar:";
-            // 
             // rozmiarTextBox
             // 
             this.rozmiarTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Rozmiar", true));
-            this.rozmiarTextBox.Location = new System.Drawing.Point(701, 270);
+            this.rozmiarTextBox.Location = new System.Drawing.Point(710, 272);
             this.rozmiarTextBox.Name = "rozmiarTextBox";
             this.rozmiarTextBox.Size = new System.Drawing.Size(100, 20);
             this.rozmiarTextBox.TabIndex = 25;
+            // 
+            // magazynDataSetBindingSource
+            // 
+            this.magazynDataSetBindingSource.DataSource = this.magazynDataSet;
+            this.magazynDataSetBindingSource.Position = 0;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typDataGridViewTextBoxColumn
+            // 
+            this.typDataGridViewTextBoxColumn.DataPropertyName = "Typ";
+            this.typDataGridViewTextBoxColumn.HeaderText = "Typ";
+            this.typDataGridViewTextBoxColumn.Name = "typDataGridViewTextBoxColumn";
+            this.typDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazwaDataGridViewTextBoxColumn
+            // 
+            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
+            this.nazwaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // producentDataGridViewTextBoxColumn
+            // 
+            this.producentDataGridViewTextBoxColumn.DataPropertyName = "Producent";
+            this.producentDataGridViewTextBoxColumn.HeaderText = "Producent";
+            this.producentDataGridViewTextBoxColumn.Name = "producentDataGridViewTextBoxColumn";
+            this.producentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 328);
+            this.ClientSize = new System.Drawing.Size(838, 328);
             this.Controls.Add(rozmiarLabel);
             this.Controls.Add(this.rozmiarTextBox);
             this.Controls.Add(modelLabel);
@@ -404,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazynDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazynDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,11 +430,6 @@
         private MagazynDataSet magazynDataSet;
         private System.Windows.Forms.BindingSource tableBindingSource;
         private MagazynDataSetTableAdapters.TableTableAdapter tableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
-        private MagazynDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nazwaTextBox;
         private System.Windows.Forms.TextBox producentTextBox;
@@ -435,6 +440,12 @@
         private System.Windows.Forms.TextBox typTextBox;
         private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.TextBox rozmiarTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource magazynDataSetBindingSource;
     }
 }
 

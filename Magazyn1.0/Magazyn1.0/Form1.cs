@@ -25,6 +25,21 @@ namespace Magazyn1._0
 
         private void moreBtn_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in this.productDataGrid.SelectedRows)
+            {
+                try
+                {
+                    string id = row.Cells[0].Value.ToString();
+                    ShowMoreDialog moreDialog = new ShowMoreDialog(id);
+                    moreDialog.ShowDialog();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Nie wybrano pozycji!");
+                }
+
+            }
         }
+
     }
 }
