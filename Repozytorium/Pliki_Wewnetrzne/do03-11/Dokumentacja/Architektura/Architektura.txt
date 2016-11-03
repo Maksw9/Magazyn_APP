@@ -1,0 +1,1 @@
+Tutaj będą umieszczane pliki związane z architekturą aplikacji.
