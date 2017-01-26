@@ -19,7 +19,8 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" type="text/css">
     </head>
     <body>
@@ -34,7 +35,8 @@
                     <a href="/">Strona glowna</a>
                     <a href="/produkt/dodaj">Dodaj produkt</a>
                     <a href="/produkt/historia">Historia operacji</a>
-                    <a href="/inwent">Inwentaryzacja</a> / <a href="/inwent/historia">Historia</a> 
+                    <a href="/inwent">Inwentaryzacja</a> / <a href="/inwent/historia">Historia</a>
+                  <a href="/zamowienie/zamow">Złóż zamówienie</a> 
                 </div>
             </div>
         

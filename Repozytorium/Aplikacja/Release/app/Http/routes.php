@@ -41,6 +41,7 @@ Route::group(['middleware' => ['validation']], function(){
   // Tutaj formularze poddane walidacji
   //Produkt
   Route::get('produkt/dodaj', 'ProduktController@dodaj');
+  Route::get('zamowienie/zamow', 'ZamowienieController@zlozZamowienie');
   Route::post('produkt/zapisz', 'ProduktController@zapisz');
   //Inwentaryzacja
   Route::any('inwent', 'InwentController@lista');
