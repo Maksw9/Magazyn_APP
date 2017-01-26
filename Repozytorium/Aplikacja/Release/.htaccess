@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteRule ^phpmyadmin - [L,NC]
-RewriteRule ^(.*)$ public/$1 [L]
-</IfModule>
-
